@@ -18,7 +18,7 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-console.log(galleryItems);
+// console.log(galleryItems);
 
 const galleryRef = document.querySelector('.gallery');
 
@@ -37,4 +37,7 @@ function createGalleryItems(galleryItems) {
 
 galleryRef.insertAdjacentHTML('beforeend', createGalleryItems(galleryItems));
 
+const gallery = new SimpleLightbox('.gallery__item');
 
+gallery.options.captionsData = "alt";
+gallery.options.captionDelay = 250;

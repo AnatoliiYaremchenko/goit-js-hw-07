@@ -43,7 +43,7 @@ import { galleryItems } from './gallery-items.js';
 
 const galleryRef = document.querySelector('.gallery');
 
-function createImageBox(galleryItems) {
+function createGalleryItems(galleryItems) {
   const markup = galleryItems
     .map(
       ({ preview, original, description }) =>
@@ -65,7 +65,7 @@ function createImageBox(galleryItems) {
   return markup;
 };
 
-galleryRef.insertAdjacentHTML('beforeend', createImageBox(galleryItems));
+galleryRef.insertAdjacentHTML("beforeend", createGalleryItems(galleryItems));
 
 galleryRef.addEventListener('click', onGalleryItemClick);
 
